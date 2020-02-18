@@ -7,3 +7,8 @@ body {
     background-attachment: fixed;
 }
 
+input {font-size:14pt}
+input, label {vertical-align:middle}
+.qrcode-text {padding-right:1.7em; margin-right:0; }
+.qrcode-text-btn {display:inline-block; background:url('qr.png') 90% 90%; height:1.7em; width:1.7em; margin-left:-1.5em; cursor:pointer;}
+.qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0}
