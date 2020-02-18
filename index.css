@@ -1,0 +1,9 @@
+body {
+    padding-top: 3.5rem;
+  }
+
+.jumbotron .container{
+    background-image:url('greens.jpg');
+    background-attachment: fixed;
+}
+
