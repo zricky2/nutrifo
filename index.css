@@ -3,10 +3,12 @@ body {
     text-align: center;
   }
 
+
 .jumbotron .container{
     
     background-image:url('lettuce.jpg');
     background-size: cover;
+    color: white;
     
 }
 
