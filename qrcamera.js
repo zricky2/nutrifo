@@ -12,8 +12,8 @@ function openQRCamera(node) {
       qrcode.decode(reader.result);
     };
     reader.readAsDataURL(node.files[0]);
-  }
-  
+  };
+
   function showQRIntro() {
     return confirm("Use your camera to take a picture of a QR code.");
-  }
+  };
