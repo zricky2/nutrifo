@@ -15,8 +15,16 @@ body {
 .h1 {
   display: inline-block;
 }
+
+
+
+
 input {font-size:14pt; margin: center;}
 input, label {vertical-align:middle; margin-bottom:0px; margin-right: 0.5em;}
 .qrcode-text {padding-right:1.7em; margin-right:0; }
 .qrcode-text-btn {display:inline-block; background:url('qr.png') center/100% no-repeat; height:1.7em; width:1.7em; margin-left:-1.7em; cursor:pointer;}
-.qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0}
+.qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0;}
+
+.d-block.mb-2 {
+  margin: auto;
+}
