@@ -9,14 +9,13 @@ body {
     background-image:url('lettuce.jpg');
     background-size: cover;
     color: white;
+    width: 100%;
     
 }
 
 .h1 {
   display: inline-block;
 }
-
-
 
 
 input {font-size:14pt; margin: center;}
