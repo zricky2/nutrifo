@@ -5,7 +5,7 @@ from selenium import webdriver
 
 #dynanmic webscraping
 
-driver = webdriver.Chrome("/usr/local/bin/chromedriver") #opens up the website
+driver = webdriver.Chrome() #opens up the website
 
 url= "https://grocery.walmart.com/ip/Great-Value-2-Reduced-Fat-Milk-1-Gallon-128-Fl-Oz/10450115?athcpid=10450115&athpgid=athenaGroceryHomepage&athcgid=null&athznid=null&athieid=null&athstid=CS014&athguid=466001f5-46cfa622-a290da589a18a716&athancid=null&athena=true"
 
