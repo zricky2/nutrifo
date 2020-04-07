@@ -13,10 +13,6 @@ body {
     
 }
 
-.h1 {
-  display: inline-block;
-}
-
 
 input {font-size:14pt; margin: center;}
 input, label {vertical-align:middle; margin-bottom:0px; margin-right: 0.5em;}

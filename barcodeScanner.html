@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        
+        /* In order to place the tracking correctly */
+        canvas.drawing,
+        canvas.drawingBuffer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .btn {
+            margin-top: 100px;
+            position: relative;
+            background-color: rgb(228, 55, 98);
+            border: none;
+            border-radius: 15px;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .btn:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: rgb(136, 196, 231);
+
+        }
+
+        .flex-container>div {
+            background-color: #f5e61a;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            border-radius: 30px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand mr-auto mr-lg-0" href="index.html">Nutrinfo</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav mr-auto" id = "navul">
+                <li class="nav-item active">
+                  <a class="nav-link" href="scanner.html">Scanner</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="community.html">Community</a>
+                </li>
+                <li class="nav-item active dropdown">
+                  <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">General Nutrition</a>
+                    <a class="dropdown-item" href="#">Diets</a>
+                    <a class="dropdown-item" href="#">Food Additives</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <!-- Div to show the scanner -->
+        <div id="scanner-container"></div>
+
+        <button class="btn" id="btn" style="vertical-align:middle"><span>Scan/Stop</span></button>
+
+    </main>
+    <!-- Include quagga minified version from a local file -->
+    <script src="quagga.min.js"></script>
+
+    <!-- Or use a CDN -->
+    <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+
+    <script src="barcodeScanner.js"></script>
+
+</body>
+
+</html>

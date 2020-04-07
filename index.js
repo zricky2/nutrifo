@@ -1,13 +1,13 @@
-var node = document.createElement("LI");                 // Create a <li> node
-node.className = "nav-item active";
+//var node = document.createElement("LI");                 // Create a <li> node
+//node.className = "nav-item active";
     
 //var textnode = document.createTextNode("Login"); 
-var att = document.createElement("a")
-att.textContent = "Login";
-att.href = "login.html";
-att.className = "nav-link";                          
-node.appendChild(att);// Append the text to <li>
-document.getElementById("navul").appendChild(node);     // Append <li> to <ul> with
+//var att = document.createElement("a")
+//att.textContent = "Login";
+//att.href = "login.html";
+//att.className = "nav-link";                          
+//node.appendChild(att);// Append the text to <li>
+//document.getElementById("navul").appendChild(node);     // Append <li> to <ul> with
 
 function openQRCamera(node) {
     var reader = new FileReader();

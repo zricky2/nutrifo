@@ -1,0 +1,6 @@
+var obj = [
+    {"code": "0038000219856", "name": "Kellogg's Apple Jacks Cereal", "ingredients" : ""}, 
+    {"code": "0028400310413", "name": "Lay's Classic Potato Chips, Party Size, 13 oz Bag", "ingredients" : "POTATOES, VEGETABLE OIL (SUNFLOWER, CORN AND/OR CANOLA OIL), AND SALT"}, 
+    
+  ];
+  //extra zero
