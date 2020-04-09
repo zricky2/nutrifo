@@ -135,9 +135,11 @@ function startScanner() {
                         }
                     }
                 }
+                ingt.textContent = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;
+                ing.appendChild(ingt);
             }
-            ingt.textContent = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;
-            ing.appendChild(ingt);    
+            
+                
         }
 
         document.getElementById("result").appendChild(upc);
