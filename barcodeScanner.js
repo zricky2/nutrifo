@@ -128,7 +128,7 @@ function startScanner() {
         var addCount = 0;
         for (i in items.item) {
             if (items.item[i].id == result.codeResult.code) {
-                for (x in items.item.ingredients) {
+                for (x in items.item[i].ingredients) {
                     for (y in additives) {
                         if (x == y) {
                             addCount ++;
