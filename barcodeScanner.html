@@ -7,111 +7,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        
-        /* In order to place the tracking correctly */
-        canvas.drawing,
-        canvas.drawingBuffer {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="barcodeScanner.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
 
-        .btn {
-            margin-top: 100px;
-            position: relative;
-            background-color: rgb(228, 55, 98);
-            border: none;
-            border-radius: 15px;
-            font-size: 28px;
-            color: #FFFFFF;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            transition-duration: 0.4s;
-            text-decoration: none;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .btn:after {
-            content: "";
-            background: #f1f1f1;
-            display: block;
-            position: absolute;
-            padding-top: 300%;
-            padding-left: 350%;
-            margin-left: -20px !important;
-            margin-top: -120%;
-            opacity: 0;
-            transition: all 0.8s
-        }
-
-        .btn:active:after {
-            padding: 0;
-            margin: 0;
-            opacity: 1;
-            transition: 0s
-        }
-
-        .flex-container {
-            display: flex;
-            background-color: rgb(136, 196, 231);
-
-        }
-
-        .flex-container>div {
-            background-color: #f5e61a;
-            margin: 10px;
-            padding: 20px;
-            font-size: 30px;
-            border-radius: 30px;
-        }
-        
-    </style>
 </head>
 
 <body>
-    <main class="main">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand mr-auto mr-lg-0" href="index.html">Nutrinfo</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <ul class="navbar-nav mr-auto" id = "navul">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand mr-auto mr-lg-0" href="index.html">Nutrinfo</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto" id="navul">
                 <li class="nav-item active">
-                  <a class="nav-link" href="scanner.html">Scanner</a>
+                    <a class="nav-link" href="scanner.html">Scanner</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="community.html">Community</a>
+                    <a class="nav-link" href="community.html">Community</a>
                 </li>
                 <li class="nav-item active dropdown">
-                  <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">General Nutrition</a>
-                    <a class="dropdown-item" href="#">Diets</a>
-                    <a class="dropdown-item" href="#">Food Additives</a>
-                  </div>
+                    <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Nutrition</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">General Nutrition</a>
+                        <a class="dropdown-item" href="#">Diets</a>
+                        <a class="dropdown-item" href="#">Food Additives</a>
+                    </div>
                 </li>
-              </ul>
-            </div>
-          </nav>
-        <!-- Div to show the scanner -->
-        <div id="scanner-container"></div>
+            </ul>
 
-        <button class="btn" id="btn" style="vertical-align:middle"><span>Scan/Stop</span></button>
+        </div>
+    </nav>
+
+    <main class="main text-center" id="main">
+        <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Click to Scan</h1>
+            
+            <button class="scanbutton" id="scan"><span>Scan</span></button>
+            <p class="lead">Scan the barcode of an item to get a rating if the item is recommended. 
+                <br><a href="learnMore.html">Learn More</a>
+            </p>
+        </div>
+        <div class = "result" id ="result">
+        </div>
+    
+<!--modal-->
+        <div class="modal" id="livestream_scanner">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Scan Barcode</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        
+                    </div>
+                    <div class="modal-body" style="position: static">
+                        <div id="interactive" class="viewport"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <label class="btn btn-default pull-left">
+                             
+                        </label>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
     </main>
-    <!-- Include quagga minified version from a local file -->
-    <script src="quagga.min.js"></script>
+    <!--footer-->
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img src="fruits.jpg" width="70" height="70" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewbox="0 0 24 24"
+                    focusable="false">
+
+                <small class="d-block mb-3 text-muted">© 2020</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/footer/translate.html">Partner With Us</a></li>
+                    <li><a class="text-muted" href="/footer/developer.html">Stuff for developers</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/footer/resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/footer/contact.html">Contact</a></li>
+                    <li><a class="text-muted" href="/footer/terms.html">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <!-- Or use a CDN -->
     <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
 
     <script src="barcodeScanner.js"></script>
+
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
