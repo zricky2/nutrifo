@@ -9,9 +9,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="barcodeScanner.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163231820-1');
+    </script>
 
 </head>
 
@@ -49,16 +55,16 @@
     <main class="main text-center" id="main">
         <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Click to Scan</h1>
-            
+
             <button class="scanbutton" id="scan"><span>Scan</span></button>
-            <p class="lead">Scan the barcode of an item to get a rating if the item is recommended. 
+            <p class="lead">Scan the barcode of an item to get a rating if the item is recommended.
                 <br><a href="learnMore.html">Learn More</a>
             </p>
         </div>
-        <div class = "result" id ="result">
+        <div class="result" id="result">
         </div>
-    
-<!--modal-->
+
+        <!--modal-->
         <div class="modal" id="livestream_scanner">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -67,7 +73,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        
+
                     </div>
                     <div class="modal-body" style="position: static">
                         <div id="interactive" class="viewport"></div>
@@ -75,7 +81,7 @@
                     </div>
                     <div class="modal-footer">
                         <label class="btn btn-default pull-left">
-                             
+
                         </label>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
@@ -124,7 +130,7 @@
     <script src="barcodeScanner.js"></script>
 
     <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -132,6 +138,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
 
 </body>
 
