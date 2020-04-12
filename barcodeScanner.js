@@ -131,33 +131,37 @@ function startScanner() {
                         }
                     }
                 }
-                ingt.innerText = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;   
+                ingt.innerText = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;
+                break;   
             }
         }
         ing.appendChild(ingt);
         document.getElementById("result").appendChild(upc);
         document.getElementById("result").appendChild(ing);
 
-        var color = document.createElement("div");
-        color.className = "flex-container";
+        //var color = document.createElement("div");
+        //color.className = "flex-container";
         console.log(addCount);
         if (addCount <= 4) {
         var label1 = document.createElement("span");
         label1.className = "label1";
+        label1.id = "label";
         label1.innerText = "Safe";
-        color.appendChild(label1);
+        document.getElementById("result").appendChild(label1);
         } else if (addCount <= 8) {
         var label2 = document.createElement("span");
         label2.className = "label2";
+        label1.id = "label";
         label2.innerText = "Unsure";
-        color.appendChild(label2);
+        document.getElementById("result").appendChild(label2);
         } else {
         var label3 = document.createElement("span");
         label3.className = "label3";
+        label1.id = "label";
         label3.innerText = "Avoid";
-        color.appendChild(label3);
+        document.getElementById("result").appendChild(label3);
         }
-        document.getElementById("result").appendChild(color);
+        //document.getElementById("result").appendChild(color);
         Quagga.offProcessed();
         Quagga.offDetected();
         Quagga.stop();
