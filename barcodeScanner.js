@@ -118,6 +118,10 @@ function startScanner() {
 
     Quagga.onDetected(function (result) {
         console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
+        Quagga.offProcessed();
+        console.log("Processing Stopped");
+        Quagga.offDetected();
+        console.log("Detetcting Stopped");
         var oldResult = document.getElementById("rcontent");
         var newResult = document.createElement("div");
         newResult.className = "modal-body";
@@ -131,12 +135,12 @@ function startScanner() {
         //product name
         var name = document.createElement("P");
         name.id = "name"
-        var nameText = document.createTextNode("Unknown Product");
+        name.innerHTML = "Unknown Product";
         //ingredients
         var ing = document.createElement("P");
         ing.id = "ing";
-        var ingText = document.createTextNode("Sorry");
-
+        ing.innerHTML = "Sorry";
+        //check for item
         var addCount = 0;
         for (i in items.item) {
             if (items.item[i].id == result.codeResult.code) {
@@ -147,13 +151,12 @@ function startScanner() {
                         }
                     }
                 }
-                nameText.innerText = "Product Name: " + items.item[i].name; 
-                ingText.innerText = "Ingredients: " + items.item[i].ingredients;
+                
+                name.innerHTML = "Product Name: " + items.item[i].name; 
+                ing.innerHTML = "Ingredients: " + items.item[i].ingredients;
                 break;   
             }
         }
-        name.appendChild(nameText);
-        ing.appendChild(ingText);
         newResult.appendChild(number);
         newResult.appendChild(name);
         newResult.appendChild(ing);
@@ -179,10 +182,6 @@ function startScanner() {
         newResult.appendChild(label3);
         }
         
-        Quagga.offProcessed();
-        console.log("Processing Stopped");
-        Quagga.offDetected();
-        console.log("Detetcting Stopped");
         Quagga.stop();
         _scannerIsRunning = false;
         console.log("Scanner Stopped");
