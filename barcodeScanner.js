@@ -108,10 +108,6 @@ function startScanner() {
 
 
     Quagga.onDetected(function (result) {
-        //var oldCode = document.getElementById("barcode");
-        //if (typeof (oldCode) != 'undefined' && oldCode != null) {
-        //    document.removeChild(oldCode);
-        //}
         console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
         var oldResult = document.getElementById("result");
         var newResult = document.createElement("div");
@@ -123,7 +119,7 @@ function startScanner() {
         var t = document.createTextNode("Barcode Number: " + result.codeResult.code); //result.codeResult.code;
         upc.appendChild(t);
         var ing = document.createElement("P");
-        ing.id = "ing"
+        ing.id = "ing";
         var ingt = document.createTextNode("Unknown Product");
         var addCount = 0;
         for (i in items.item) {
@@ -135,17 +131,13 @@ function startScanner() {
                         }
                     }
                 }
-                ingt.textContent = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;
-                ing.appendChild(ingt);
+                ingt.innerText = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;   
             }
-            
-                
         }
-
+        ing.appendChild(ingt);
         document.getElementById("result").appendChild(upc);
         document.getElementById("result").appendChild(ing);
 
-         
         var color = document.createElement("div");
         color.className = "flex-container";
         console.log(addCount);
@@ -165,7 +157,6 @@ function startScanner() {
         label3.innerText = "Avoid";
         color.appendChild(label3);
         }
-        
         document.getElementById("result").appendChild(color);
         Quagga.offProcessed();
         Quagga.offDetected();
@@ -176,16 +167,6 @@ function startScanner() {
         
     });
 }
-
-//var xmlhttp = new XMLHttpRequest();
-//xmlhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1OLWDqMnjsZV9EjUcoF_gmAWAsnL7KLmy8JV7KuJTTuo/1/public/full?alt=json", true);
-//xmlhttp.onreadystatechange = function() {
-//  if (this.readyState == 4 && this.status == 200) {
-//    var data = JSON.parse(this.responseText);
-    //document.getElementById("result").innerHTML = this.responseText[0];
-//  }
-//};
-//xmlhttp.send();
 
 
 // Start/stop scanner

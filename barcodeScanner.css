@@ -2,6 +2,10 @@
     margin-top: 56px;
 }
 
+main>div>p {
+    margin-top: 15px;
+}
+
 .scanbutton {
     
     background-color: rgb(248, 11, 82);
