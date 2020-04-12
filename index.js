@@ -36,4 +36,4 @@ function openQRCamera(node) {
   function enableBtn() {
     document.getElementById("go").disabled = false;
   };
-  <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+  //<script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>

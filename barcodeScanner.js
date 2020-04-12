@@ -6,6 +6,15 @@ var x = document.getElementsByClassName("close")[0];
 
 var close = document.getElementsByClassName("btn btn-primary")[0];
 
+// Get the result modal
+var resultModal = document.getElementById("result");
+
+// Get the <span> element that closes the modal
+var resultExit = document.getElementById("resultExit");
+
+var resultClose = document.getElementById("resultClose");
+
+
 //barcodes
 var items = {
     "item":[
@@ -109,18 +118,25 @@ function startScanner() {
 
     Quagga.onDetected(function (result) {
         console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
-        var oldResult = document.getElementById("result");
+        var oldResult = document.getElementById("rcontent");
         var newResult = document.createElement("div");
-        newResult.className = "result";
-        newResult.id = "result";
+        newResult.className = "modal-body";
+        newResult.id = "rcontent";
         oldResult.parentNode.replaceChild(newResult, oldResult);
-        var upc = document.createElement("P");
-        upc.id = "barcode"
-        var t = document.createTextNode("Barcode Number: " + result.codeResult.code); //result.codeResult.code;
-        upc.appendChild(t);
+        //barcode
+        var number = document.createElement("P");
+        number.id = "barcode"
+        var barcode = document.createTextNode("UPC Number: " + result.codeResult.code); 
+        number.appendChild(barcode);
+        //product name
+        var name = document.createElement("P");
+        name.id = "name"
+        var nameText = document.createTextNode("Unknown Product");
+        //ingredients
         var ing = document.createElement("P");
         ing.id = "ing";
-        var ingt = document.createTextNode("Unknown Product");
+        var ingText = document.createTextNode("Sorry");
+
         var addCount = 0;
         for (i in items.item) {
             if (items.item[i].id == result.codeResult.code) {
@@ -131,44 +147,48 @@ function startScanner() {
                         }
                     }
                 }
-                ingt.innerText = "Name: " + items.item[i].name + " Ingredients: " + items.item[i].ingredients;
+                nameText.innerText = "Product Name: " + items.item[i].name; 
+                ingText.innerText = "Ingredients: " + items.item[i].ingredients;
                 break;   
             }
         }
-        ing.appendChild(ingt);
-        document.getElementById("result").appendChild(upc);
-        document.getElementById("result").appendChild(ing);
+        name.appendChild(nameText);
+        ing.appendChild(ingText);
+        newResult.appendChild(number);
+        newResult.appendChild(name);
+        newResult.appendChild(ing);
 
-        //var color = document.createElement("div");
-        //color.className = "flex-container";
         console.log(addCount);
         if (addCount <= 4) {
         var label1 = document.createElement("span");
         label1.className = "label1";
         label1.id = "label";
         label1.innerText = "Safe";
-        document.getElementById("result").appendChild(label1);
+        newResult.appendChild(label1);
         } else if (addCount <= 8) {
         var label2 = document.createElement("span");
         label2.className = "label2";
-        label1.id = "label";
+        label2.id = "label";
         label2.innerText = "Unsure";
-        document.getElementById("result").appendChild(label2);
+        newResult.appendChild(label2);
         } else {
         var label3 = document.createElement("span");
         label3.className = "label3";
-        label1.id = "label";
+        label3.id = "label";
         label3.innerText = "Avoid";
-        document.getElementById("result").appendChild(label3);
+        newResult.appendChild(label3);
         }
-        //document.getElementById("result").appendChild(color);
+        
         Quagga.offProcessed();
+        console.log("Processing Stopped");
         Quagga.offDetected();
+        console.log("Detetcting Stopped");
         Quagga.stop();
         _scannerIsRunning = false;
         console.log("Scanner Stopped");
         modal.style.display = "none";
-        
+        console.log("Show result");
+        resultModal.style.display = "block";
     });
 }
 
@@ -201,5 +221,21 @@ window.onclick = function (event) {
         modal.style.display = "none";
         console.log("Scanner Stopped");
         _scannerIsRunning = false;
+    } else if (event.target == resultModal) {
+        resultModal.style.display = "none";
     }
 }
+
+//result modal
+  // When the user clicks on <span> (x), close the modal
+resultExit.onclick = function() {
+    resultModal.style.display = "none";
+}
+
+resultClose.onclick = function () {
+    resultModal.style.display = "none";
+}
+
+
+  
+  

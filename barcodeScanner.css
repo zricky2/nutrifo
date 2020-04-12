@@ -78,7 +78,7 @@ main>div>p {
     margin: 10px;
     padding: 10px;
     font-size: 20px;
-    border-radius: 50%;
+    border-radius: 30px;
 }  
 
 #interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
@@ -93,4 +93,8 @@ canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
 footer {
     bottom: 0;
     width: 100%;
+}
+
+#rcontent {
+    position: "static";
 }
