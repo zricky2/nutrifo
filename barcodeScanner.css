@@ -21,30 +21,11 @@ main>div>p {
     cursor: pointer;
 }
 
-.scanbutton:after {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-}
-
-.scanbutton:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-}
 
 .flex-container {
     display: flex;
     justify-content: center;
-    background-color: rgb(201, 218, 250);
+    background-color: rgb(210, 223, 248);
 
 }
 
@@ -56,10 +37,10 @@ main>div>p {
     border-radius: 30px;
 }  
 
-  #interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
-  #interactive.viewport > canvas, #interactive.viewport > video {max-width: 100%;width: 100%;}
+#interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
+#interactive.viewport > canvas, #interactive.viewport > video {max-width: 100%;width: 100%;}
   
-  canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
+canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
 
 .label1 {background-color: #4CAF50; color: white;} 
 .label2 {background-color: rgb(240, 243, 33);color: white;} 
