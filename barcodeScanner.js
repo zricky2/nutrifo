@@ -19,15 +19,16 @@ var resultClose = document.getElementById("resultClose");
 var items = {
     "item":[
     {"id": "028400310413", "name": "Lay's Classic Potato Chips, Party Size, 13 oz Bag", "ingredients" : ["POTATOES", "VEGETABLE OIL", "SALT"] },
-    {"id": "038000219856", "name": "Kellogg's Apple Jacks Cereal", "ingredients" : ["Whole grain wheat" , "sugar", "brownrice syrup", "gelatin", "BHT"]},
+    {"id": "038000219856", "name": "Kellogg's Apple Jacks Cereal", "ingredients" : ["Whole grain wheat", " sugar", " brownrice syrup", " gelatin" , " BHT"]},
     {"id": "030000012000", "name": "Quaker Oats", "ingredients": 	["100 Natural Whole Grain Quaker Quality Rolled Oats"]},
     {"id": "722252318237", "name": "Cliff Bar Coconut Almond Butter",	"ingredients" : ["NUT BUTTER BLEND* (ALMOND BUTTER*, CASHEW BUTTER*), BROWN RICE SYRUP*, ROLLED OATS*, OAT FLOUR*, PEA PROTEIN*, DATE PASTE*, CANE SYRUP*, RICE STARCH*, PALM OIL*, TAPIOCA SYRUP*, CANE SUGAR*, HIGH OLEIC SUNFLOWER OIL*, RICE FLOUR*, VEGETABLE GLYCERIN, COCONUT*, VIRGIN COCONUT OIL*, SEA SALT, NATURAL FLAVORS, COCOA*, NATURAL FLAVORS*, SUNFLOWER LECITHIN, MIXED TOCOPHEROLS (ANTIOXIDANT)"]},
     {"id": "070404001354", "name": "Pompeian Pomegranate Infused Red Wine Vinegar", "ingredients": 	["RED WINE VINEGAR REDUCED WITH WATER TO 5% ACIDITY"]}
+    
 ]}
 
-var additives = ["Potassium bromate","Propyl paraben", "Butylated hydroxyanisole", "BHA", "Butylated hydroxytoluene", "BHT", "Propyl gallate", 
-    "Theobromine", "Secret flavor ingredients", "Artificial colors", "Diacetyl", "Phosphate-based food additives",
-    "Aluminum-based additives"]
+var additives = [" Potassium bromate"," Propyl paraben", " Butylated hydroxyanisole", " BHA", " Butylated hydroxytoluene", " BHT", " Propyl gallate", 
+    " Theobromine", " Secret flavor ingredients", " Artificial colors", " Diacetyl", " Phosphate-based food additives",
+    " Aluminum-based additives"]
 //scanner
 var _scannerIsRunning = false;
 
@@ -140,20 +141,22 @@ function startScanner() {
         var ing = document.createElement("P");
         ing.id = "ing";
         ing.innerHTML = "Sorry";
+        var addit = [];
         //check for item
         var addCount = 0;
         for (i in items.item) {
             if (items.item[i].id == result.codeResult.code) {
                 for (x in items.item[i].ingredients) {
                     for (y in additives) {
-                        if (x == y) {
+                        if (additives[y] === items.item[i].ingredients[x]) {
+                            addit.push(additives[y]);
                             addCount ++;
                         }
                     }
                 }
-                
+                console.log("Count is " + addCount);
                 name.innerHTML = "Product Name: " + items.item[i].name; 
-                ing.innerHTML = "Ingredients: " + items.item[i].ingredients;
+                ing.innerHTML = "Ingredients: " + items.item[i].ingredients+ "<br/> Additives in the product: " + addit;
                 break;   
             }
         }
@@ -161,7 +164,7 @@ function startScanner() {
         newResult.appendChild(name);
         newResult.appendChild(ing);
 
-        console.log(addCount);
+        
         if (addCount <= 4) {
         var label1 = document.createElement("span");
         label1.className = "label1";

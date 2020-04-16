@@ -4,9 +4,8 @@
 
 .main {
     margin-top: 56px;
-    background-image: url("images/redwhite.jpg");
+    background-image: url("images/plant.jpg");
     background-size: cover;
-    size: cover;
 }
 
 @media screen and (max-height: 800px) {
@@ -95,6 +94,15 @@ footer {
     width: 100%;
 }
 
-#rcontent {
-    position: "static";
+.modal-title {
+    margin-left: auto;
+    color: #34485d;
+}
+.modal-body {
+    background-image: url("images/cuttingboard.jpg");
+    background-size: cover;
+    color: #34485d;
+}
+.modal-content {
+    background-color: #e6ecef;
 }
