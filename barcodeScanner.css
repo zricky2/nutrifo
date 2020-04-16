@@ -74,10 +74,8 @@ main>div>p {
 }
 
 #label {
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 30px;
+    padding: 5px;
+    font-size: 15px;
 }  
 
 #interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
@@ -86,8 +84,7 @@ main>div>p {
 canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
 
 .label1 {background-color: #4CAF50; color: white;} 
-.label2 {background-color: rgb(240, 243, 33);color: white;} 
-.label3 {background-color: #ff0000;color: white;} 
+.label2 {background-color: #ff0000;color: white;} 
 
 footer {
     bottom: 0;

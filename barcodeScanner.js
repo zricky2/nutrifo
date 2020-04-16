@@ -123,6 +123,10 @@ function startScanner() {
         console.log("Processing Stopped");
         Quagga.offDetected();
         console.log("Detetcting Stopped");
+        Quagga.stop();
+        _scannerIsRunning = false;
+        console.log("Scanner Stopped");
+        
         var oldResult = document.getElementById("rcontent");
         var newResult = document.createElement("div");
         newResult.className = "modal-body";
@@ -164,32 +168,21 @@ function startScanner() {
         newResult.appendChild(name);
         newResult.appendChild(ing);
 
-        
-        if (addCount <= 4) {
+        if (addCount == 0) {
         var label1 = document.createElement("span");
         label1.className = "label1";
         label1.id = "label";
-        label1.innerText = "Safe";
+        label1.innerText = "No Dirty Dozen Additives";
         newResult.appendChild(label1);
-        } else if (addCount <= 8) {
+        } else {
         var label2 = document.createElement("span");
         label2.className = "label2";
         label2.id = "label";
-        label2.innerText = "Unsure";
+        label2.innerText = "Contains at least one of the Dirty Dozen Additives";
         newResult.appendChild(label2);
-        } else {
-        var label3 = document.createElement("span");
-        label3.className = "label3";
-        label3.id = "label";
-        label3.innerText = "Avoid";
-        newResult.appendChild(label3);
         }
         
-        Quagga.stop();
-        _scannerIsRunning = false;
-        console.log("Scanner Stopped");
         modal.style.display = "none";
-        console.log("Show result");
         resultModal.style.display = "block";
     });
 }
