@@ -1,107 +1,290 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Starter Template · Bootstrap</title>
+<!DOCTYPE HTML>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
+<html>
 
-   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <title>Nutrinfo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="learnMore.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-163231820-1');
+  </script>
+</head>
 
+<body class="is-preload">
+  <div id="page-wrapper">
+    <div id="header">
+      <!-- Logo -->
+      <h1><a href="index.html" id="logo"><img src="images/logo.jpeg" width="40" height="40" alt="logo"> </a></h1>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="index.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand mr-auto mr-lg-0" href="index.html">Nutrinfo</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto" id = "navul">
-            <li class="nav-item active">
-              <a class="nav-link" href="scanner.html">Scanner</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="community.html">Community</a>
-            </li>
-            <li class="nav-item active dropdown">
-              <a class="nav-link dropdown-toggle" href="nutrition.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">General Nutrition</a>
-                <a class="dropdown-item" href="#">Diets</a>
-                <a class="dropdown-item" href="#">Food Additives</a>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="barcodeScanner.html">Scanner</a></li>
+          <li class="current"><a href="learnMore.html">Additives</a></li>
+        </ul>
       </nav>
+    </div>
+    <!-- Banner -->
+    <section id="banner">
+      <header>
+        <h2><em>Learn More about the Dirty Dozen below.</em></h2>
 
-<main role="main" class="container">
+      </header>
+    </section>
 
-  <div class="starter-template">
-    <h1>Here’s EWG’s Dirty Dozen list:</h1>
-    <p class="lead">Nitrites and nitrates
-        <ol>
-        <li>Potassium bromate</li>
-        
-        <li>Propyl paraben</li>
-        
-        <li>Butylated hydroxyanisole (BHA)</li>
-        
-        <li>Butylated hydroxytoluene (BHT)</li>
-        
-        <li>Propyl gallate</li>
-        
-        <li>Theobromine</li>
-        
-        <li>Secret flavor ingredients</li>
-        
-        <li>Artificial colors</li>
-        
-        <li>Diacetyl</li>
-        
-        <li>Phosphate-based food additives<li>
-        
-        <li>Aluminum-based additives</li></ol>
-    </p>
+    <!-- Highlights -->
+    <section class="wrapper style1">
+      <div class="container">
+        <div class="row gtr-200">
+
+          <section class="col-4 col-12-narrower">
+            <div class="box highlight">
+              <div style="overflow-x:auto;">
+                <table>
+                  <tr>
+                    <th>Additive</th>
+                    <th>Risk</th>
+                    <th>More Info</th>
+                  </tr>
+                  <tr>
+                    <td><span class = "red">Nitrates & Nitrites</span></td>
+                    <td>Research suggests that regular consumption of nitrates and nitrites is associated with an
+                      increased risk of cancer.</td>
+                    <td>Used as preservatives in cured meats; e.g., salami, ham, bacon, sausages</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "red">Potassium bromate</span></td>
+                    <td>While Potassium Bromate is banned by many nations, it is still legal in the United States. The
+                      International Cancer Agency classifies Potassium Bromate as a 2B human carcinogen. It is known to
+                      cause tumors at multiple sites in animals, and also has been found
+                      to cause kidney and DNA damage. DISCLAIMER: Baking converts most potassium bromate to
+                      non-carcinogenic potassium bromide, but research in the United Kingdom has shown that bromate
+                      residues are still detectable in finished bread in small but significant amounts
+                    </td>
+                    <td>Used to strengthen bread and cracker dough to help it rise during baking; commonly added to
+                      flour</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Propylparaben</span></td>
+                    <td>Research suggests that Propylparaben acts as a weak synthetic estrogen and may impact hormones
+                      for fertility. It also may alter the expression of genes, which could be associated with other
+                      health issues</td>
+                    <td>Used as a preservative in foods such as tortillas, muffins and food dyes. </td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Butylated hydroxyanisole (BHA)</span></td>
+                    <td>Research suggests that regular consumption of BHA could be linked to cancer. The National
+                      Toxicology Program classifies it as “reasonably anticipated to be a human carcinogen,” and the
+                      International Cancer Agency categorizes it as a possible human carcinogen.</td>
+                    <td>Added to fats and foods that contain fats (e.g., chips, preserved meats) and is allowed as a
+                      preservative in flavoring.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="col-4 col-12-narrower">
+            <div class="box highlight">
+              <div style="overflow-x:auto;">
+                <table>
+                  <tr>
+                    <th>Additive</th>
+                    <th>Risk</th>
+                    <th>More Info</th>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Butylated hydroxytoluene (BHT)</span></td>
+                    <td>While BHT is not a listed carcinogen, research suggests that it causes cancer, disrupts
+                      endocrine signaling, and causes developmental changes in animals. </td>
+                    <td>Used as a food preservative in things like cereals, sausage, hot dogs, meat patties, chewing
+                      gum, potato chips, beer, butter, and vegetable oils</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Propyl gallate</span></td>
+                    <td>Despite being classified GRAS, there is some evidence that suggests propyl gallate is linked to
+                      an increased risk of cancer or endocrine disruption. The current evidence is weak, so Nutrinfo
+                      suggests you learn more before consuming this product.</td>
+                    <td>Used as a preservative in products that contain edible fats (e.g., sausage, lard), microwave
+                      popcorn, soup mixes, and frozen meals.</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Theobromine</span></td>
+                    <td></td>
+                    <td>Commonly found in chocolate and in leaves of the tea plant, and has effects similar to caffeine.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Secret Flavor ingredients</span>
+                    </td>
+                    <td>“Natural flavors” & “Artificial flavors”</td>
+                    <td>Can contain synthetic material such as propylene glycol or the preservative BHA. Beware, flavor
+                      extracts derived from genetically engineered crops may be labeled as “natural.”</td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="col-4 col-12-narrower">
+            <div class="box highlight">
+              <div style="overflow-x:auto;">
+                <table>
+                  <tr>
+                    <th>Additive</th>
+                    <th>Risk</th>
+                    <th>More Info</th>
+                  </tr>
+                  <tr>
+                    <td><span class = "red">Artificial colors</span></td>
+                    <td>Different colors cause different health problems, for example, in a National Toxicology Program
+                      study, caramel colors III and IV have been linked to causing tumors.</td>
+                    <td>Commonly found in Instant flavored Oatmeal, salad dressings such as Kraft, cereals, syrup, and
+                      microwave popcorn. This is not a list of all foods containing Artificial Colors, just some of the
+                      most common.</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "red">Phosphate food additives</span></td>
+                    <td>“Phosphoric acid",
+                      “Sodium polyphosphate”,
+                      “Pyrophosphate",
+                      “Sodium tripolyphosphate”,
+                      “Polyphosphate”,
+                      “Tricalcium phosphate”,
+                      “Hexametaphosphate”,
+                      “Trisodium phosphate”,
+                      “Dicalcium phosphate”,
+                      “Sodium phosphate”,
+                      “Monocalcium phosphate”,
+                      “Tetrasodium phosphate”,
+                      “Aluminum phosphate”.
+                      Consumption has been linked to increased cardiovascular risk, and in people with chronic kidney
+                      disease, consumption is associated with heart disease and death.
+                    </td>
+                    <td>Phosphates are frequently added to highly processed foods, including fast foods, and are
+                      commonly found in breakfast bars, dairy creamers, flavored waters, and bottled coffee beverages.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class = "yellow">Diacetyl</span></td>
+                    <td>According to OSHA (Occupational Safety and Health Administration), Diacetyl has been associated
+                      with a severe and irreversible respiratory condition called bronchiolitis obliterans, which leads
+                      to inflammation and permanent scarring of the airways. </td>
+                    <td>Commonly found in butter flavoring in microwave popcorn, dairy products such as yogurt and
+                      cheese, and in “brown flavorings” such as butterscotch and maple.</td>
+                  </tr>
+                  <tr>
+                    <td><span class = "red">Aluminum additives</span></td>
+                    <td>“Sodium aluminum phosphate”,
+                      “Sodium aluminum sulfate”. There is scientific uncertainty around the underlying effects of
+                      Aluminum additives, but it is thought to be linked to neurological effects such as changes in
+                      behavior, learning, and motor response.
+                    </td>
+                    <td>Aluminum additives are commonly found in cake mixes, processed cheese, baking soda/powder, and
+                      soy based and/or lactose intolerant baby formulas. This is not a list of all foods containing
+                      Aluminum additives, just some of the most common.
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+      <p class = "bottom"><span class = "red">Red</span> means research suggests that red labeled additives are associated with an increased risk of particular health risks.
+      <br><span class = "yellow">Yellow</span> means while these additives are classified as “Generally Recognized as Safe” or GRAS, they are not required to undergo pre-market review and approval.
+      Research suggests that these additives are not safe for human consumption. <br> It is recommended that the user takes into regard of the known risk while consuming certain products. 
+      </p>
+      <h1 class="ewg">The information above is based on information from the Environmental Working Group (EWG). Click
+        here to <a href="https://www.ewg.org/research/ewg-s-dirty-dozen-guide-food-additives">Learn More</a></h1>
+    </section>
+
+
+    <!-- Footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <section class="col-3 col-6-narrower col-12-mobilep">
+            <h3>Resources</h3>
+            <ul class="links">
+              <li><a href="learnMore.html">Learn More</a></li>
+            </ul>
+          </section>
+          <section class="col-3 col-6-narrower col-12-mobilep">
+            <h3>About</h3>
+            <ul class="links">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Terms</a></li>
+
+            </ul>
+          </section>
+          <section class="col-6 col-12-narrower">
+            <h3>Get In Touch</h3>
+            <form>
+              <div class="row gtr-50">
+                <div class="col-6 col-12-mobilep">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="col-6 col-12-mobilep">
+                  <input type="email" name="email" id="email" placeholder="Email" />
+                </div>
+                <div class="col-12">
+                  <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" class="button alt" value="Send Message" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <!-- Icons -->
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
+        <li><a href="https://instagram.com/nutrinfo.usa?igshid=n4okgochrb" class="icon brands fa-instagram"><span
+              class="label">Instagram</span></a></li>
+
+      </ul>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <ul class="menu">
+          <li>&copy; Nutrinfo. All rights reserved</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!--End of footer-->
+
   </div>
 
-</main><!-- /.container -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 
-</body></html>
+</html>

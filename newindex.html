@@ -1,0 +1,141 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Nutrinfo">
+  <meta name="author" content="Ricky Zheng">
+  <title>Nutrinfo</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-163231820-1');
+  </script>
+  <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand mr-auto mr-lg-0" href="index.html"><img src="images/logo.jpeg" width = "50" height = "50" alt="logo"></a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto" id="navul">
+        <li class="nav-item active">
+          <a class="nav-link" href="barcodeScanner.html">Scanner</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="community.html">Community</a>
+        </li>
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Nutrition</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">General Nutrition</a>
+            <a class="dropdown-item" href="#">Diets</a>
+            <a class="dropdown-item" href="#">Food Additives</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main" class="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="background-color: #e3f2fd;">
+      <div class="container">
+        <h1 class="display-3">Welcome to Nutrinfo!</h1>
+        <p>Check out our scanner below to check for certain additives.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://www.ewg.org/research/ewg-s-dirty-dozen-guide-food-additives" role="button">Learn more &raquo;</a></p>
+
+      </div>
+    </div>
+
+    <!--<div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>-->
+
+
+    <div class="cont">
+
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <h2>Scan Item</h2>
+          <p>Scan barcode to check if your item contains any possible harmful ingredients</p>
+          <p><a class="btn btn-secondary" id="scanbutton" href="barcodeScanner.html" role="button">Scan &raquo;</a></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+    <hr>
+    </div>
+
+  </main>
+
+  <!--footer-->
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-6 col-md">
+        <img src="images/logo.jpeg" width="70" height="70" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewbox="0 0 24 24"
+          focusable="false">
+
+        <small class="d-block mb-3 text-muted">© 2020</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Learn about Nutrition</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resources</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Contact</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <!--NAV BUTTON-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

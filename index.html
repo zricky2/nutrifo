@@ -1,139 +1,145 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nutrinfo">
-  <meta name="author" content="Ricky Zheng">
-  <title>Nutrinfo</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-163231820-1');
-  </script>
-  <link rel="stylesheet" href="index.css" type="text/css">
+	<title>Nutrinfo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-163231820-1');
+	</script>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <a class="navbar-brand mr-auto mr-lg-0" href="index.html"><img src="images/logo.jpeg" width = "50" height = "50" alt="logo"></a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body class="is-preload">
+	<div id="page-wrapper">
+		<div id="header">
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo"><img src="images/logo.jpeg" width="40" height="40" alt="logo"> </a></h1>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto" id="navul">
-        <li class="nav-item active">
-          <a class="nav-link" href="barcodeScanner.html">Scanner</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="community.html">Community</a>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Nutrition</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">General Nutrition</a>
-            <a class="dropdown-item" href="#">Diets</a>
-            <a class="dropdown-item" href="#">Food Additives</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li class="current"><a href="index.html">Home</a></li>
+          <li><a href="barcodeScanner.html">Scanner</a></li>
+          <li><a href="learnMore.html">Additives</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Banner -->
+		<section id="banner">
+			<header>
+				<h2><em>What is in your food? Some additives can have adverse effects.</em></h2>
+				<a href="learnMore.html" class="button">Learn
+					More</a>
+			</header>
+		</section>
 
-  <main role="main" class="main">
+		<!-- Highlights -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background-color: #e3f2fd;">
-      <div class="container">
-        <h1 class="display-3">Welcome to Nutrinfo!</h1>
-        <p>Check out our scanner below to check for certain additives.</p>
-        <p><a class="btn btn-primary btn-lg" href="https://www.ewg.org/research/ewg-s-dirty-dozen-guide-food-additives" role="button">Learn more &raquo;</a></p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<a class = "scanner" href="barcodeScanner.html"><i class="icon solid major fa-barcode"></i></a>
+							<h3>Scanner</h3>
+							<p>Click the green button to go to our scanner page.</p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
 
-      </div>
-    </div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
 
-    <!--<div>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>-->
+		
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<section class="col-3 col-6-narrower col-12-mobilep">
+						<h3>Resources</h3>
+						<ul class="links">
+							<li><a href="learnMore.html">Learn More</a></li>
+						</ul>
+					</section>
+					<section class="col-3 col-6-narrower col-12-mobilep">
+						<h3>About</h3>
+						<ul class="links">
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Terms</a></li>
 
+						</ul>
+					</section>
+					<section class="col-6 col-12-narrower">
+						<h3>Get In Touch</h3>
+						<form>
+							<div class="row gtr-50">
+								<div class="col-6 col-12-mobilep">
+									<input type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="col-6 col-12-mobilep">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="button alt" value="Send Message" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+			</div>
 
-    <div class="cont">
+			<!-- Icons -->
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
+				<li><a href="https://instagram.com/nutrinfo.usa?igshid=n4okgochrb" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 
-      <div class="row">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-4">
-          <h2>Scan Item</h2>
-          <p>Scan barcode to check if your item contains any possible harmful ingredients</p>
-          <p><a class="btn btn-secondary" id="scanbutton" href="barcodeScanner.html" role="button">Scan &raquo;</a></p>
-        </div>
-      </div>
-      <div class="col-md-4">
+			</ul>
 
-      </div>
-    </div>
-    <hr>
-    </div>
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Nutrinfo. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
 
-  </main>
+		</div>
+		<!--End of footer-->
 
-  <!--footer-->
+	</div>
 
-  <footer class="container py-5">
-    <div class="row">
-      <div class="col-6 col-md">
-        <img src="images/logo.jpeg" width="70" height="70" fill="none" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewbox="0 0 24 24"
-          focusable="false">
-
-        <small class="d-block mb-3 text-muted">© 2020</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Learn about Nutrition</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Resources</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Contact</a></li>
-          <li><a class="text-muted" href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <script src="index.js"></script>
-  <!--NAV BUTTON-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>

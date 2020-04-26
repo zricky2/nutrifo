@@ -1,67 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arcana by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="barcodeScanner.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="barcodeScanner.css">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">   
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-163231820-1');
-    </script>
-
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163231820-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-163231820-1');
+	</script>     
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand mr-auto mr-lg-0" href="index.html"><img src="images/logo.jpeg" width = "50" height = "50" alt="logo"></a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <div id="header">
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo"><img src="images/logo.jpeg" width="40" height="40" alt="logo"> </a></h1>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto" id="navul">
-                <li class="nav-item active">
-                    <a class="nav-link" href="barcodeScanner.html">Scanner</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="community.html">Community</a>
-                </li>
-                <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="learnMore.html" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Nutrition</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">General Nutrition</a>
-                        <a class="dropdown-item" href="#">Diets</a>
-                        <a class="dropdown-item" href="#">Food Additives</a>
-                    </div>
-                </li>
-            </ul>
-
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="current"><a href="barcodeScanner.html">Scanner</a></li>
+                    <li><a href="learnMore.html">Additives</a></li>
+				</ul>
+			</nav>
         </div>
-    </nav>
+        
+        <!-- Highlights -->
+		<section class="wrapper style1" id = "topsection">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
 
-    <main class="main text-center" id="main">
-        <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Click to Scan</h1>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<button class="scanbutton" id="scan"></button>
+							<h3>Scanner</h3>
+							<p>Click the green button to start scanning.</p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
 
-            <button class="scanbutton" id="scan"></button>
-            <p class="lead">Scan the barcode of an item to get a recommendation rating.<br>The rating is based on the
-                dirty dozen additives.<br> Click below to learn more.
-                <br><a href="https://www.ewg.org/research/ewg-s-dirty-dozen-guide-food-additives">Learn More</a>
-            </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
 
-        </div>
+        <!-- Gigantic Heading -->
+        <section class="wrapper style4">
+            
+        </section>
+
+        <!-- Posts -->
+        <section class="wrapper style1">
+            <div class="container">
+                <div class="row">
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            
+                            <div class="inner">
+                                <h3>Using the Scanner</h3>
+                                <p>The scanner only works for barcodes that are black with a white background. The scanner only reads UPC codes. Try scanning the barcode again if the barcode does not match with result given.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            
+                            <div class="inner">
+                                <h3>Scanner Result</h3>
+                                <p>The result of the scanner is based on the Dirty Dozen additives. We will alert you if it contains any of the 
+                                    Dirty Dozen additives. Look at the significance of the different feebacks below. Click here to <a href="learnMore.html">Learn more</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="row">
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            
+                            <div class="inner">
+                                <h3>Problems</h3>
+                                <p>If there is a problem with the scanner please try scanning it again or contact us.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            
+                            <div class="inner">
+                                <h3>Products</h3>
+                                <p>Our database of product is limted so if is not in our database then a feeback cannot be given. We are currently growing our database.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row">
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            <div class="inner">
+                                <h3>Significance of <span class= "red">HARMFUL ADDITIVE(S) DETECTED</span> </h3>
+                                <p>We recommend you reconsider consuming this product or only consume this product in moderation. </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-6 col-12-narrower">
+                        <div class="box post">
+                            <div class="inner">
+                                <h3>Significance of <span class= "green">NO ADDITIVES DETECTED</span></h3>
+                                <p>There are no food additives from the Dirty Dozen list in this product. 
+                                    Depending on your nutritional needs and dietary restrictions, there may be other ingredients in this product that could impact your health.
+                                    </p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+
+            </div>
+        </section>
 
         <!--modal-->
         <div class="modal" id="livestream_scanner">
@@ -101,48 +175,76 @@
                     <div class="modal-footer">
                         <label class="btn btn-default pull-left">
                         </label>
-                        <button type="button" class="btn btn-primary" id = "resultClose" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="resultClose"
+                            data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div>
 
-    </main>
-    <!--footer-->
-    <footer class="container py-4">
-        <div class="row">
-            <div class="col-6 col-md">
-                <img src="images/logo.jpeg" width="70" height="70" fill="none" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-                    viewbox="0 0 24 24" focusable="false">
-                <small class="d-block mb-3 text-muted">© 2020</small>
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <section class="col-3 col-6-narrower col-12-mobilep">
+                        <h3>Resources</h3>
+                        <ul class="links">
+                            <li><a href="learnMore.html">Learn More</a></li>
+                        </ul>
+                    </section>
+                    <section class="col-3 col-6-narrower col-12-mobilep">
+                        <h3>About</h3>
+                        <ul class="links">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms</a></li>
+
+                        </ul>
+                    </section>
+                    <section class="col-6 col-12-narrower">
+                        <h3>Get In Touch</h3>
+                        <form>
+                            <div class="row gtr-50">
+                                <div class="col-6 col-12-mobilep">
+                                    <input type="text" name="name" id="name" placeholder="Name" />
+                                </div>
+                                <div class="col-6 col-12-mobilep">
+                                    <input type="email" name="email" id="email" placeholder="Email" />
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><input type="submit" class="button alt" value="Send Message" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
             </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Learn about Nutrition</a></li>
-                    
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Resources</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Contact</a></li>
-                    <li><a class="text-muted" href="#">Terms</a></li>
+
+            <!-- Icons -->
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                 <!--       <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
+                <li><a href="https://instagram.com/nutrinfo.usa?igshid=n4okgochrb" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+            </ul>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <ul class="menu">
+                    <li>&copy; Nutrinfo. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                 </ul>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <!-- Or use a CDN -->
+    <!-- Scripts -->
     <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
-    <script src="barcodeScanner.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -150,6 +252,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="barcodeScanner.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
