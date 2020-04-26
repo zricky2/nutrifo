@@ -1,13 +1,9 @@
+
 .scanbutton {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
     transition-duration: 0.5s;
     cursor: pointer;
     background-color:lightgreen;
-    background-image: url("images/blogo.png");
-    background-position: center;
-    background-size: cover;
+    
 }
 
 .red {
@@ -49,3 +45,8 @@ canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
 #topsection {
     background-image: url("images/fruits.jpg")
 }
+
+.modal {
+    margin-top: 45px;
+}
+
